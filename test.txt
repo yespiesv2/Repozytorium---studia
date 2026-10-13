@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Pozdrawiam
+=======
+witam wszystkich
+>>>>>>> test_2
