@@ -19,7 +19,7 @@ class Movie:
 @app.get("/movies")
 def get_movies():
     try:
-        with open('movies.csv', encoding='utf-8') as file:
+        with open('data/movies.csv', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader) 
             return [Movie(row[0], row[1], row[2]).__dict__ for row in reader if len(row) >= 3]
@@ -51,7 +51,7 @@ class Tag:
 @app.get("/links")
 def get_links():
     try:
-        with open('links.csv', encoding='utf-8') as file:
+        with open('data/links.csv', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader)
         
@@ -62,7 +62,7 @@ def get_links():
 @app.get("/ratings")
 def get_ratings():
     try:
-        with open('ratings.csv', encoding='utf-8') as file:
+        with open('data/ratings.csv', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader)
             
@@ -73,7 +73,7 @@ def get_ratings():
 @app.get("/tags")
 def get_tags():
     try:
-        with open('tags.csv', encoding='utf-8') as file:
+        with open('data/tags.csv', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader)
            
